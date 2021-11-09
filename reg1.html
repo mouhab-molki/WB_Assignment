@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Regisration Form</title>
+    <link rel="stylesheet" href="css/reg1.css"/>
+    <script type="text/javascript" src="reg1.js"></script>
+
+</head>
+
+<body> 
+   <!-- for background -->
+    <main>  
+        <!--glass background -->
+        <section class="glass">  
+
+                    <!--main title -->
+
+            <div class="title"> <h1><b> <i>Registration Form </i></b></h1></div>
+          
+            <!--The Form -->
+
+            <div class="form">
+                 <form id="theform" name='registration' >
+                    <table id='table'>
+                       <tr>
+                              <td>
+                              First Name :
+                              </td>
+        
+                            <td>
+                                <input type="text" name="first_name" id="first_name" placeholder="Please enter your first name" maxlength="30" onkeyup="fname_counter()" required autofocus />
+
+                            </td>
+                            
+                            <td>
+                                <span class="counter" id="fcounter">30</span>
+                            </td>
+
+                        </tr>
+        
+                         <tr>
+                             <td>
+                             Middle Initial:
+                             </td>
+        
+                             <td>
+                                <input type="text" name="middle_initial" id="middle_initial" placeholder="Please enter your first initial letter"  maxlength="1" onkeyup="mname_counter()" required autofocus/>
+                             </td>
+                            
+                             <td>
+                                <span class="counter" id="mcounter">1</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Last Name :
+                            </td>
+                        
+                            <td>
+                                <input type="text" name="last_name" id="last_name" placeholder="Please enter your last name" maxlength="30" onkeyup="lname_counter()"required autofocus/>
+                            </td>
+                        
+                            <td>
+                                <span class="counter" id="lcounter">30</span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                City :
+                            </td>
+                        
+                            <td>
+                                <input type="text" name="city" id="city" placeholder="Please enter the city where you live" maxlength="20" onkeyup="city_counter()" required autofocus/>
+                            </td>
+                            <td>
+                                <span  class="counter" id="ccounter">20</span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                State / Province : 
+                            </td>
+                        
+                            <td>
+                                <select name="state" id="state">
+                                    <option> please choose your state.. </option>
+                                    <option> New York    </option>
+                                    <option> Alabama     </option>
+                                    <option> Florida     </option>
+                                    <option> New Jersey  </option>
+                                    <option> Texas       </option>
+                                    <option> Washington  </option>
+                                </select>
+                            </td>
+                        
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                Country :
+                            </td>
+                        
+                            <td>
+                                
+                                <label>   <input type="radio" id="country" name="country" checked="checked" value="united_states" />  United States </label> <br>
+                                <label>   <input type="radio" id="country" name="country" value="canda" />                            Canda </label> <br>
+                                <label>   <input type="radio" id="country" name="country" value="other" />                            Other </label> <br>
+                            </td>
+                        
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                ZIP :
+                            </td>
+                        
+                            <td>
+                                <input type="text" name="zip" id="zip" placeholder="Please enter your zip code" required autofocus/>
+                            </td>
+                        
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                Email :
+                            </td>
+                        
+                            <td>
+                                <input type="email" id="email" name="Email" placeholder="email@example.com" maxlength="30" onkeyup="email_counter()" required autofocus/>
+                            </td>
+                            <td>
+                                <span class="counter" id="EMcounter">30</span>
+                            </td>
+                        </tr>
+                        
+
+                        
+                        <tr>
+                            <td>
+                                Username:
+                            </td>
+                        
+                            <td>
+                                <input type="text" id="username" name="username" placeholder="Please enter your username" maxlength="20" onkeyup="usr_counter()" required autofocus/>
+                            </td>
+                        
+                            <td>
+                                <span class="counter" id="usrcounter">20</span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                Password:
+                            </td>
+                        
+                            <td>
+                                <input type="password" id="password" name="password"   placeholder="Please enter your password" maxlength="15" onkeyup="pass_counter()" required autofocus/>
+                            </td>
+
+                            <td>
+                                <span class="counter" id="passcounter">15</span>
+                            </td>
+
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                Repeat Password:
+                            </td>
+                        
+                            <td>
+                                <input type="password" id="repeatpassword" name="repeatpassword" placeholder="Please repeat your password" maxlength="15" onkeyup="reppass_counter()" required autofocus/>
+                            </td>
+                            <td>
+                                <span class="counter" id="reppasscounter">15</span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                Comments:  
+                            </td>
+                            
+                            <td>
+                                <textarea id="comments" name="Comments" rows="2" cols="27" placeholder="Write something..."></textarea>
+                            </td>
+                        
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                             <!--I used the paragraph to make the checkbox on the right instead of left cuz I think it's cooler lol-->      
+                                <p> I agree to the site terms:   <input type="checkbox" name="checkbox_agree"  required autofocus/> </p>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                    <input type="submit" value="Submit" onclick="ValidateForm()"/>
+                                    <input type="button" value="Reset form" onclick="reset_fctn()" />
+                            </td>
+                        </tr>
+                        
+                        </table>
+                        </form>
+        </div>
+        </section>
+    </main>
+
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="circle3"></div>
+
+
+</body>
+</html>
