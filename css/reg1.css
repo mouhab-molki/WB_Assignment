@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*background*/
+main{
+    min-height: 100vh; /*to cover the whole screen*/
+    background: rgb(97,44,178);
+    background: linear-gradient(126deg, rgba(97,44,178,1) 0%, rgba(66,28,126,1) 8%, rgba(42,16,87,1) 22%, rgba(42,16,87,1) 29%, rgba(13,2,54,1) 67%, rgba(13,2,54,1) 100%);
+    /*to center the section in the middle*/
+    display: flex; /*to make align-items and justify-content work */
+    align-items: center;
+    justify-content: center;
+}
+
+/*section part (the container)*/
+.glass{
+    background: white ;
+    min-height: 80%; /* to set a minimum height*/
+    min-width: 40em; /* to set a minimum width*/
+    background: linear-gradient(to right bottom,rgba(255,255,255,1), rgba(255,255,255,0.5));
+    border-radius: 2%;
+    z-index: 2 ; /*to make the section part in the top of circels*/
+    display: flex; /*to make align-items and justify-content work */
+    flex-direction: column; /*to make divs displayed veritcally */
+    margin-top:  2rem;  /* to give a little bit space from the top*/
+    margin-bottom:  2rem;  /* to give a little bit space from the bottom*/
+    padding-bottom:  2rem;  /* to give a little bit space from the bottom of the container*/
+    -webkit-backdrop-filter: blur(1em);     /*give blur effet for the section, I used the prefixed for compatibility reasons*/
+    backdrop-filter: blur(1em);     /*give blur effet for the section*/
+
+
+}
+/* styling the circels*/
+.circle1,
+.circle2,
+.circle3{
+    background: rgb(255,255,255);
+    background: linear-gradient(126deg, rgba(255,255,255,1) 0%, rgba(155,72,196,1) 39%, rgba(113,12,155,1) 80%, rgba(132,0,246,1) 100%);   height: 14rem;
+    width: 14rem;
+    position:absolute; /*to move the circels around*/
+    justify-content: center;
+    border-radius: 50%; /*to make the divs as circles*/
+}
+
+
+/*modify the circles locations*/
+.circle1{
+    top:5%;
+    right:15%;
+}
+.circle2{
+    bottom:5%;
+    left:10%;
+}
+
+.circle3{
+    bottom: -35%;
+    right:15%;
+}
+
+/*modify the main title*/
+
+.title{
+text-align: center; /*modify the main title place*/
+margin-top: 1rem; /* to give a little bit space from the top*/
+text-shadow:  6px 6px 20px rgb(122, 122, 122);
+color: #2d778a;
+font-weight: 200;
+font-size: 2rem;
+opacity: 0.8; 
+}
+
+/*modify the form section*/
+
+.form{
+display: flex; /*to make justify-content work */
+flex-direction: column; /*to make divs displayed veritcally */
+justify-content: space-evenly; /*to make the space between the form bars equal*/
+margin: 1rem 1rem;
+
+}
+
+.form td{
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+
+/*to modify each line of the form and make a box shape for each one*/
+
+.form tr{
+    display: flex; 
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.9), rgba(255,255,255,0.5));
+    border-radius: 1rem;
+    padding-bottom:0.8rem;
+    padding-top:0.8rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    min-width: 150%;
+    box-shadow: 6px 6px 20px rgba(122,122,122,0.212); /*make a shadow for each line on the form*/
+
+
+}
+
+
+/*modify only the input form section*/
+
+input[type=text],[type=email],[type=password], textarea{
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    border: none;
+    width: 200%;
+    height: 120%;
+    padding-bottom: 0.3rem;
+    border-radius: 0.5rem;
+    margin-left:  12%;
+    padding-left:  5%;
+    outline-color: #65dfc92a ;
+    display: flex; /*to make align-items and justify-content work */
+    justify-content: space-around;
+}
+
+/*modify only the textarea form section*/
+
+textarea{
+    width: 170%;
+
+}
+
+/*modify only the button in the form*/
+
+input[type=submit],
+input[type=button]
+{
+background: linear-gradient(to right bottom,rgba(255,255,255,0.7), rgba(143, 216, 204, 0.3));
+border-radius: 0.5rem;
+border-color: #a4d2da71;
+padding:0.2rem;
+box-shadow: 6px 6px 20px rgba(122,122,122,0.212); /*make a shadow for each line on the form*/
+
+
+}
+input[type=submit]{
+    margin-left: 10rem;
+}
+ input[type=button]{
+    margin-left: 2rem;
+
+}
+
+/* to modify radio button size*/
+input[type=radio]{
+    width: 15px;
+    height: 15px;
+}
+
+/* to modify the counter*/
+
+.counter{
+    position: absolute;
+    right: 7rem;
+    width: 55px;
+    font-size: 17px;
+    color: #686868;
+    text-align: center;
+    border-left: 1px solid #d8d8d8;
+    pointer-events: none;}
+
+    /* to prevent comment textarea from expand hersontally*/
+    .form textarea{
+        resize: vertical;
+    }
+
+    /* to adjust input field width only in repeat password*/
+    #repeatpassword{
+        width: 170%;
+    }
