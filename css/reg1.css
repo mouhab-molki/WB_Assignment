@@ -178,7 +178,18 @@ input[type=radio]{
         width: 170%;
     }
     @media screen and (max-width: 992px) {
-    .circle3 {
-     display: none;    
-    }
+  /*modify the circles locations*/
+.circle1{
+    top:15%;
+    right:5%;
+}
+.circle2{
+    top: 45%;
+    left: 5%;
+}
+
+  .circle3 {
+     top: 75%;
+    right: 5%;
+}
       }
