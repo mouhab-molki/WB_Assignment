@@ -48,17 +48,17 @@ main{
 
 /*modify the circles locations*/
 .circle1{
-    top:5vh;
-    right:15vw;
+    top:5%;
+    right:15%;
 }
 .circle2{
-    top: 55vh;
-    left:10vw;
+    top: 45%;
+    left: 20%;
 }
 
 .circle3{
-    top: 130vh;
-    right:15vw;
+    top: 85%;
+    right:15%;
 }
 
 /*modify the main title*/
@@ -177,3 +177,8 @@ input[type=radio]{
     #repeatpassword{
         width: 170%;
     }
+    @media screen and (max-width: 992px) {
+    .circle3 {
+     display: none;    
+    }
+      }
