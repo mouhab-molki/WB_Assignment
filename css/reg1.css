@@ -195,6 +195,6 @@ input[type=radio]{
 }
      
 input[type=text],[type=email],[type=password], textarea{
-   width: 165%;
+   width: 150%;
 }
 }
