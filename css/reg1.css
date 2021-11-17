@@ -47,7 +47,7 @@ main{
 }
 /*To modify first coulmn width */
 .f_coulmn{
-width: 150px;
+width: 130px;
 
 }
 /*modify the main title*/
@@ -212,5 +212,8 @@ input[type=radio]{
      top: 75%;
     right: 5%;
 }
-     
+  .f_coulmn{
+width: 150px;
+
+}   
 }
