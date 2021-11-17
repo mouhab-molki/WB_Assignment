@@ -110,6 +110,12 @@ margin-top: 150px;
 /* to solve circle places in mobile phones*/
     @media screen and (max-width: 992px) {
   /*modify the circles locations*/
+main{
+min-height: 100vh;
+}
+.glass{
+    height: 37vh;
+}
 .circle1{
     top:15%;
     right:5%;
