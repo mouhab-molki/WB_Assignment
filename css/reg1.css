@@ -1,0 +1,308 @@
+/*Resiting the dimension on te screen*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*background*/
+main{
+    min-height: 100vh; /*to cover the whole screen*/
+    background: rgb(97,44,178);
+    background: linear-gradient(126deg, rgba(97,44,178,1) 0%, rgba(66,28,126,1) 8%, rgba(42,16,87,1) 22%, rgba(42,16,87,1) 29%, rgba(13,2,54,1) 67%, rgba(13,2,54,1) 100%);
+    /*to center the section in the middle*/
+    display: flex; /*to make align-items and justify-content work */
+    align-items: center;
+    justify-content: center;
+}
+
+/*section part (the container)*/
+.glass{
+    background: white ;
+    max-height: 80%; /* to set a maximum height*/
+    width: 680px;    /* to set the width*/
+    background: linear-gradient(to right bottom,rgba(255,255,255,1), rgba(255,255,255,0.5));
+    border-radius: 2%;
+    z-index: 2 ; /*to make the section part in the top of circels*/
+    display: block; /*to make glass section work as block to prevent reduce the section height when typing in mobile phones */
+    margin-top:  2rem;  /* to give a little bit space from the top*/
+    margin-bottom:  2rem;  /* to give a little bit space from the bottom*/
+    padding-bottom:  2rem;  /* to give a little bit space from the bottom of the container*/
+    -webkit-backdrop-filter: blur(1em);     /*give blur effet for the section, I used the prefixed for compatibility reasons*/
+    backdrop-filter: blur(1em);     /*give blur effet for the section*/
+
+
+}
+
+/*Table Style*/
+#table {
+    width: 600px;
+    border-color:none;
+    margin-left: 30px;
+    background-color: none;
+
+}
+/*To modify first coulmn width */
+.f_coulmn{
+width: 130px;
+
+}
+/*modify the main title*/
+
+.title{
+text-align: center; /*modify the main title place*/
+margin-top: 1rem; /* to give a little bit space from the top*/
+text-shadow:  6px 6px 20px rgb(122, 122, 122);
+color: #7917a2;
+font-weight: 200;
+font-size: 2rem;
+opacity: 0.8; 
+}
+
+
+.form td{
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+
+/*to modify each line of the form and make a box shape for each one*/
+
+ tr{
+    display: inline-block;  /*To make each row seperate from others*/
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.9), rgba(255,255,255,0.5));
+    border-radius: 1rem;
+    padding-bottom:0.8rem;
+    padding-top:0.8rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    height:50px;
+    width:580px;
+    box-shadow: 6px 6px 20px rgba(122,122,122,0.212); /*make a shadow for each line on the form*/
+}
+
+.comments_row{
+    height:125px;
+}
+.country_row{
+    height:80px;
+
+}
+/*modify only the input form section*/
+#first_name,
+#middle_initial,
+#last_name,
+#city,
+#zip,
+#username,
+#email,
+#password,
+#repeatpassword,
+#state,
+#comments{
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    border: none;
+    width:400px;
+    padding-bottom: 0.3rem;
+    border-radius: 0.5rem;
+    padding-left:  5%;
+    outline-color: #c12cee93 ;
+
+}
+#state
+{
+    display:flex;
+    width:250px;
+    height:20px;
+}
+
+/* to adjust input field width only in repeat password*/
+#repeatpassword{
+    width: 100px;
+}
+
+/*modify only the textarea form section*/
+
+textarea{
+    width:400px;
+    height: 100px;
+    resize: none;  /* to prevent comment textarea from expand hersontally*/
+}
+
+/*modify only the button in the form*/
+
+input[type=submit],
+input[type=button]
+{
+    background: linear-gradient(to right bottom,rgb(135 66 255 / 0.63), rgb(80 24 168 / 0.75));
+    border-radius: 0.5rem;
+    padding:0.2rem;
+    margin-left:40px;
+    border-color: none;
+    box-shadow: 6px 6px 20px rgba(122,122,122,0.212); /*make a shadow for button*/
+    color: white;
+    width: 80px;
+
+
+}
+input[type=submit]{
+    margin-left: 10rem;
+}
+ input[type=button]{
+    margin-left: 2rem;
+
+}
+
+/* to modify radio button size*/
+input[type=radio]{
+    width: 15px;
+    height: 15px;
+}
+
+/* to modify the counter*/
+
+.counter{
+                
+    height: 32px;
+    font-size: 17px;
+    color: #686868;
+    border-left: 0.2px solid #d8d8d8;
+    pointer-events: none;
+    margin-top: 13px;
+
+}  
+   
+    /************************************nav bar**********************************************************/
+    nav {
+        display: flex; /*To make logo and list become next to each other */
+        flex-wrap:nowrap;
+        justify-content: space-around; /* to make list in the left and logo in the right*/
+        align-items: center; /*to center all things vertically*/
+    background:linear-gradient(126deg, rgba(66,28,126,1) , rgba(42,16,87,1));
+      font-family: "Poppins", sans-serif;
+    }
+    .logo {
+        color: #ebe4e4;
+        text-transform: uppercase; /*make letters uppercase*/
+        letter-spacing: 5px; /*make space bettwen letters*/
+        font-size: 20px;
+    }
+    #menu li {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+    }
+    #menu ul {
+          display: flex; /*to make links goes horizantlly*/
+        justify-content: space-around;
+        width: auto;
+    }
+    #menu li {
+        float: left;
+        display: inline;
+        position: relative;
+    }
+    #menu a {
+        display: block;
+        line-height: 50px;
+        padding: 0 14px;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-size: 16px;
+    }
+    #menu a.dropdown-arrow:after {
+        content: "\25BF";
+        margin-left: 5px;
+    }
+    #menu li a:hover {
+        color: #FFFFFF;
+        background: #5311B6;
+    }
+    #menu label {
+        display: none;	
+        line-height: 50px;
+        text-align: center;
+        position: absolute;
+        left: 35px;
+    }
+    #menu label:before {
+        font-size: 1.6em;
+        content: "\2261"; 
+        margin-left: 20px;
+    }
+    #menu ul.sub-menus{
+        height: auto;
+        overflow: hidden;
+        width: 170px;
+        background:linear-gradient(126deg, rgba(66,28,126,1) , rgba(42,16,87,1));
+        position: absolute;
+        z-index: 3;
+        display: none;
+    }
+    #menu ul.sub-menus li {
+        display: block;
+        width: 100%;
+    }
+    #menu ul.sub-menus a {
+        color: #FFFFFF;
+        font-size: 16px;
+    }
+    #menu li:hover ul.sub-menus {
+        display: block;
+    }
+    #menu ul.sub-menus a:hover{
+        background: #5311B6;
+        color: #FFFFFF;
+    }
+    .active 
+    {
+        background-color: rgba(155,72,196,1);
+    }
+
+
+    
+/* styling the circels*/
+.circle1,
+.circle2,
+.circle3{
+    background: rgb(255,255,255);
+    background: linear-gradient(126deg, rgba(255,255,255,1) 0%, rgba(155,72,196,1) 39%, rgba(113,12,155,1) 80%, rgba(132,0,246,1) 100%);   height: 14rem;
+    width: 14rem;
+    position:absolute; /*to move the circels around*/
+    justify-content: center;
+    border-radius: 50%; /*to make the divs as circles*/
+}
+
+
+/*modify the circles locations*/
+.circle1{
+    top:20%;
+    right:15%;
+}
+.circle2{
+    top: 60%;
+    left: 15%;
+}
+
+.circle3{
+    top: 100%;
+    right:15%;
+}
+/* to solve circle places in mobile phones*/
+    @media screen and (max-width: 992px) {
+  /*modify the circles locations*/
+.circle1{
+    top:15%;
+    right:5%;
+}
+.circle2{
+    top: 45%;
+    left: 5%;
+}
+
+  .circle3 {
+     top: 75%;
+    right: 5%;
+}
+     
+}
